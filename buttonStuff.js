@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
 	
+	console.log(chrome.tabs.getCurrent);
 	var feed = document.getElementById('feed-button');
 	var sleep = document.getElementById('sleep-button');
 	feed.addEventListener("click", feedCreature);
@@ -51,9 +52,10 @@ document.addEventListener('DOMContentLoaded', function() {
 			var name= document.getElementById("name");
 			name.innerHTML = response.name;
 
-			var status = document.getElementById("status");
-			status.innerHTML = response.hunger;
+			// var status = document.getElementById("status");
+			// status.innerHTML = response.hunger;
 
 		}
 	}
+
 });
