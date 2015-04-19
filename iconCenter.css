@@ -1,6 +1,7 @@
  body {
   font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
   text-align: center;
+  min-width: 200px; 
 }
 #status {
   /* avoid an excessively wide status text */
