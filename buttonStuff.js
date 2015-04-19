@@ -64,10 +64,12 @@ document.addEventListener('DOMContentLoaded', function() {
 		meaolaSleep.open("PUT", server + "/creatures/1/rest");
 		meaolaSleep.send();
 
-		if(this.readyState == 4 && this.status == 204){
-	 			console.log("The mea ola is sleeping");
-	 			statusImage.setAttribute("src", "./gifs/sleepB/sleep.gif");
-	 		}
+		meaolaSleep.onreadystatechange = function() {
+			if(this.readyState == 4 && this.status == 204){
+		 			console.log("The mea ola is sleeping");
+		 			statusImage.setAttribute("src", "./gifs/sleepB/sleep.gif");
+		 		}
+	 	}
 
 	}
 
