@@ -47,25 +47,28 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	function feedCreature(){
 		var meaolaFeed = new XMLHttpRequest();
-
+		var statusImage = document.getElementById('image-result');
 		meaolaFeed.open("PUT", server + "/creatures/1/feed");
 		meaolaFeed.send();
 		meaolaFeed.onreadystatechange = function() {
 
 			if(this.readyState == 4 && this.status == 204){
 	 			console.log("I have fed the mea ola");
+	 			statusImage.setAttribute("src", "./gifs/eatB/eat.gif");
 	 		}
  		}
 	}
 	function letCreatureSleep(){
 		var meaolaSleep = new XMLHttpRequest();
+		var statusImage = document.getElementById('image-result');
 		meaolaSleep.open("PUT", server + "/creatures/1/rest");
 		meaolaSleep.send();
 
 		if(this.readyState == 4 && this.status == 204){
 	 			console.log("The mea ola is sleeping");
+	 			statusImage.setAttribute("src", "./gifs/sleepB/sleep.gif");
 	 		}
- 		console.log("The mea ola is sleeping");
+
 	}
 
 	var creatureInfo = new XMLHttpRequest();
@@ -94,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 			var skillValue = document.getElementById("skill-value");
-			skillValue.innerHTML = response.stats.skill;
+			skillValue.innerHTML = response.stats.skills;
 
 			var defenseValue = document.getElementById("defense-value");
 			defenseValue.innerHTML = response.stats.defense;
