@@ -92,6 +92,7 @@ document.addEventListener('DOMContentLoaded', function() {
 				statusImage.setAttribute("src", "./gifs/defB/def.gif");
 			}else if(response.status == "intelligence"){
 				chrome.browserAction.setIcon({path:"gifs/int/0001.png"});
+				statusImage.setAttribute("src", "./gifs/intB/int.gif");
 			}else if(response.status == "tired" || response.status == "sleeping"){
 				chrome.browserAction.setIcon({path:"gifs/sleep/0000.png"});
 				if(response.status == "sleeping"){
