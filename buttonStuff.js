@@ -1,5 +1,7 @@
+var server = "http://129.21.64.19:3000";
+// var server = "http://private-anon-bbd6718d7-meaola.apiary-mock.com/";
 document.addEventListener('DOMContentLoaded', function() {
-	
+
 	  var queryInfo = {
     active: true,
     currentWindow: true
@@ -18,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var url = tab.url;
     var host = url.split("/")[2];
     var visitRequest = new XMLHttpRequest();
-    var link = "http://private-anon-bbd6718d7-meaola.apiary-mock.com/creatures/1/visit/" + host;
+    var link = server + "/creatures/1/visit/" + host;
     visitRequest.open("PUT", link);
     visitRequest.send();
     visitRequest.onreadystatechange = function() {
@@ -46,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	function feedCreature(){
 		var meaolaFeed = new XMLHttpRequest();
 
-		meaolaFeed.open("PUT", "http://private-anon-bbd6718d7-meaola.apiary-mock.com/creatures/1/feed");
+		meaolaFeed.open("PUT", server + "/creatures/1/feed");
 		meaolaFeed.send();
 		meaolaFeed.onreadystatechange = function() {
 
@@ -57,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	function letCreatureSleep(){
 		var meaolaSleep = new XMLHttpRequest();
-		meaolaSleep.open("PUT", "http://private-anon-bbd6718d7-meaola.apiary-mock.com/creatures/1/rest");
+		meaolaSleep.open("PUT", server + "/creatures/1/rest");
 		meaolaSleep.send();
 
 		if(this.readyState == 4 && this.status == 204){
@@ -67,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 
 	var creatureInfo = new XMLHttpRequest();
-	creatureInfo.open("GET", "http://private-anon-bbd6718d7-meaola.apiary-mock.com/creatures/1", true);
+	creatureInfo.open("GET", server + "/creatures/1", true);
 	creatureInfo.send();
 
 	creatureInfo.onreadystatechange = function() {
@@ -96,4 +98,3 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 
 });
-

@@ -13,6 +13,7 @@
   },
   "permissions": [
     "activeTab",
-    "https://ajax.googleapis.com/"
+    "https://ajax.googleapis.com/",
+    "http://129.21.64.19:3000/"
   ]
 }
