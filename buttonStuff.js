@@ -76,6 +76,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
 			var response = JSON.parse(this.response);
 			console.log(response);
+			if(response.status == "skills"){
+				chrome.browserAction.setIcon({path:"gifs/skill/0003.png"});
+			}else if(response.status == "defense"){
+				chrome.browserAction.setIcon({path:"gifs/def/0000.png"});
+			}else if(response.status == "intelligence"){
+				chrome.browserAction.setIcon({path:"gifs/int/0001.png"});
+			}else if(response.status == "tired" || response.status == "sleeping"){
+				chrome.browserAction.setIcon({path:"gifs/sleep/0000.png"});
+			}else if(response.status == "hungry" || response.status == "eating"){
+				chrome.browserAction.setIcon({path:"gifs/eat/0002.png"});
+			else{//idle
+				chrome.browserAction.setIcon({path:"gifs/neutral/0012.png"});
+			}
+
 
 			var skillValue = document.getElementById("skill-value");
 			skillValue.innerHTML = response.stats.skill;
@@ -89,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
 			var name= document.getElementById("name");
 			name.innerHTML = response.name;
 
-			// var status = document.getElementById("status");
+			var status = document.getElementById("status");
 			// status.innerHTML = response.hunger;
 
 		}

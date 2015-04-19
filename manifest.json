@@ -8,7 +8,7 @@
   "web_accessible_resources": ["meaola.png"],
 
   "browser_action": {
-    "default_icon": "icon.png",
+    "default_icon": "gifs/neutral/0012.png",
     "default_popup": "popup.html"
   },
   "permissions": [
