@@ -7,35 +7,30 @@
 <html>
   <head>
     <title>Getting Started Extension's Popup</title>
-    <style>
-      body {
-        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
-        font-size: 100%;
-      }
-      #status {
-        /* avoid an excessively wide status text */
-        white-space: pre;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        max-width: 400px;
-      }
-    </style>
      <!-- FontAwesome -->
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./font-awesome-4.3.0/css/font-awesome.min.css">
     <!--
       - JavaScript and HTML must be in separate files: see our Content Security
       - Policy documentation[1] for details and explanation.
       -
       - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
      -->
-    <!--<script src="popup.js"></script>-->
+   <script src="buttonStuff.js"></script>
   </head>
   <body>
-    blah
-    <i class="fa fa-bed"></i>
+    <link rel="stylesheet" href="iconCenter.css"/>
+    <i id="sleep-button"class="fa fa-bed button-action"></i> 
+    <i id="feed-button" class="fa fa-cutlery button-action" ></i>
+    </p>
+    <span id="name"></span> 
+    </p>
+    <span id="status"></span> 
     <div id="status"></div>
-    <img id="image-result" hidden>
-    halp
+    <img id="image-result" src="meaola.png"/>
+    <i class="fa fa-bullseye"></i> <span id="skill-value"></span> 
+    <i class="fa fa-shield"></i> <span id="defense-value"></span> 
+    <i class="fa fa-book"></i> <span id="intelligence-value"></span>
+
   </body>
 </html>
 
