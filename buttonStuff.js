@@ -78,6 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	creatureInfo.send();
 
 	creatureInfo.onreadystatechange = function() {
+		var statusImage = document.getElementById('image-result');
 
 		if(this.readyState == 4 && this.status == 200){
 
@@ -85,16 +86,29 @@ document.addEventListener('DOMContentLoaded', function() {
 			console.log(response);
 			if(response.status == "skills"){
 				chrome.browserAction.setIcon({path:"gifs/skill/0003.png"});
+				statusImage.setAttribute("src", "./gifs/skillB/skill.gif");
 			}else if(response.status == "defense"){
 				chrome.browserAction.setIcon({path:"gifs/def/0000.png"});
+				statusImage.setAttribute("src", "./gifs/defB/def.gif");
 			}else if(response.status == "intelligence"){
 				chrome.browserAction.setIcon({path:"gifs/int/0001.png"});
 			}else if(response.status == "tired" || response.status == "sleeping"){
 				chrome.browserAction.setIcon({path:"gifs/sleep/0000.png"});
+				if(response.status == "sleeping"){
+					statusImage.setAttribute("src", "./gifs/sleepB/sleep.gif");
+				}else{
+					statusImage.setAttribute("src", "./gifs/tiredB/tired.gif");
+				}
 			}else if(response.status == "hungry" || response.status == "eating"){
 				chrome.browserAction.setIcon({path:"gifs/eat/0002.png"});
+				if(response.status == "hungry"){
+					statusImage.setAttribute("src", "./gifs/hungryB/hungry.gif");
+				}else{
+					statusImage.setAttribute("src", "./gifs/eatB/eat.gif");
+				}
 			}else{//idle
 				chrome.browserAction.setIcon({path:"gifs/neutral/0012.png"});
+				statusImage.setAttribute("src", "./gifs/neutralB/neutral.gif");
 			}
 
 
