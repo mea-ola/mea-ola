@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function() {
 				chrome.browserAction.setIcon({path:"gifs/sleep/0000.png"});
 			}else if(response.status == "hungry" || response.status == "eating"){
 				chrome.browserAction.setIcon({path:"gifs/eat/0002.png"});
-			else{//idle
+			}else{//idle
 				chrome.browserAction.setIcon({path:"gifs/neutral/0012.png"});
 			}
 
