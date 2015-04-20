@@ -1,5 +1,5 @@
 console.log(location.href);
-var server = "http://129.21.64.19:3000";
+var server = chrome.runtime.getManifest()
 
 var title = document.title;
 var url = window.location.href;

@@ -1,4 +1,5 @@
-var server = "http://129.21.64.19:3000";
+var server = chrome.runtime.getManifest()
+
 // var server = "http://private-anon-bbd6718d7-meaola.apiary-mock.com/";
 
 document.addEventListener('DOMContentLoaded', function() {

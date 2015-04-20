@@ -14,7 +14,7 @@
   "permissions": [
     "activeTab",
     "https://ajax.googleapis.com/",
-    "http://129.21.64.19:3000/"
+    "http://129.21.65.244:3000/"
   ],
   "content_scripts": [
     {
