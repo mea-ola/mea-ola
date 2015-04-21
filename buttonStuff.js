@@ -1,6 +1,4 @@
-var server = chrome.runtime.getManifest()
-
-// var server = "http://private-anon-bbd6718d7-meaola.apiary-mock.com/";
+var server = chrome.runtime.getManifest().server;
 
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -12,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	function feedCreature(){
 		var meaolaFeed = new XMLHttpRequest();
 		var statusImage = document.getElementById('image-result');
-		meaolaFeed.open("PUT", server + "/creatures/1/feed");
+		meaolaFeed.open("PUT", server + "creatures/1/feed");
 		meaolaFeed.send();
 		meaolaFeed.onreadystatechange = function() {
 
@@ -25,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	function letCreatureSleep(){
 		var meaolaSleep = new XMLHttpRequest();
 		var statusImage = document.getElementById('image-result');
-		meaolaSleep.open("PUT", server + "/creatures/1/rest");
+		meaolaSleep.open("PUT", server + "creatures/1/rest");
 		meaolaSleep.send();
 
 		meaolaSleep.onreadystatechange = function() {
@@ -38,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 
 	var creatureInfo = new XMLHttpRequest();
-	creatureInfo.open("GET", server + "/creatures/1", true);
+	creatureInfo.open("GET", server + "creatures/1", true);
 	creatureInfo.send();
 
 	creatureInfo.onreadystatechange = function() {

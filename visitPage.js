@@ -1,11 +1,11 @@
 console.log(location.href);
-var server = chrome.runtime.getManifest()
+var server = chrome.runtime.getManifest().server;
 
 var title = document.title;
 var url = window.location.href;
 
 var visitRequest = new XMLHttpRequest();
-var link = server + "/creatures/1/visit/" + url.split("/")[2];
+var link = server + "creatures/1/visit/" + url.split("/")[2];
 visitRequest.open("PUT",link);
 visitRequest.send();
 visitRequest.onreadystatechange = function() {
@@ -15,7 +15,7 @@ visitRequest.onreadystatechange = function() {
 }
 
 var creatureInfo = new XMLHttpRequest();
-creatureInfo.open("GET", server + "/creatures/1", true);
+creatureInfo.open("GET", server + "creatures/1", true);
 creatureInfo.send();
 
 creatureInfo.onreadystatechange = function() {
