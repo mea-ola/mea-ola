@@ -1,0 +1,32 @@
+{
+  "name": "mea-ola",
+  "version": "0.0.1",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "browserify": "^8.1.3",
+    "del": "^1.1.1",
+    "fluxxor": "^1.5.2",
+    "gulp": "^3.8.11",
+    "gulp-gh-pages": "^0.4.0",
+    "gulp-watch": "^4.1.1",
+    "gulp-webserver": "^0.9.0",
+    "microplugin": "0.0.3",
+    "react": "^0.12.2",
+    "reactify": "^1.0.0",
+    "vinyl-source-stream": "^1.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JRJurman/mea-ola.git"
+  },
+  "author": "Jesse Jurman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JRJurman/mea-ola/issues"
+  }
+}
