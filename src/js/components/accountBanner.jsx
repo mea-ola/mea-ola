@@ -8,24 +8,31 @@ var React = require('react');
 //    and the link to the Mea-Ola site
 var AccountBanner = React.createClass({
   render: function() {
-
     return (
       <g>
-        <MeaOlaLink />
-        <AccountLink />
-        <ExtSettingsDropdown />
+        <MeaOlaLink position='0'/>
+        <AccountLink position='1' />
+        <ExtSettingsDropdown position='2' />
       </g>
     );
   }
 });
 
+var ButtonTemplate = React.createClass({
+  render: function() {
+    var xPos = this.props.position*20;
+    return (
+      <g>
+        <rect className="mea-ola-button" x={xPos}></rect>
+      </g>
+    );
+  }
+});
 // Button that redirects the user to the mea-ola homepage
 var MeaOlaLink = React.createClass({
   render: function() {
     return (
-      <g>
-        {/*button that redirects user to the mea-ola homepage*/}
-      </g>
+      <ButtonTemplate position={this.props.position}/>
     );
   }
 });
@@ -34,9 +41,7 @@ var MeaOlaLink = React.createClass({
 var AccountLink = React.createClass({
   render: function() {
     return (
-      <g>
-        {/*button that redirects user to their account settings*/}
-      </g>
+      <ButtonTemplate position={this.props.position}/>
     );
   }
 });
@@ -45,9 +50,7 @@ var AccountLink = React.createClass({
 var ExtSettingsDropdown = React.createClass({
   render: function() {
     return (
-      <g>
-        {/*button that reveals extension settings*/}
-      </g>
+      <ButtonTemplate position={this.props.position}/>
     );
   }
 });
