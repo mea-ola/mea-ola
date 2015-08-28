@@ -1,0 +1,25 @@
+svg {
+  padding: 10px;
+}
+.mea-ola-button {
+  -webkit-transition: .2s;
+  transform-origin:center;
+  transform: translate(2px,2px);
+  width:14px;
+  height:14px;
+  rx:3px;
+  ry:3px;
+  fill: white;
+  cursor:pointer;
+}
+.mea-ola-button:hover {
+  transform: translate(0px,0px) rotate(90deg);
+  width:18px;
+  height:18px;
+}
+.mea-ola-button:active {
+  -webkit-transition: .1s;
+  transform: translate(4px,4px) rotate(90deg);
+  width:10px;
+  height:10px;
+}
