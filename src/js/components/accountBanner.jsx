@@ -3,31 +3,23 @@
 // React Class for rendering the account banner
 
 var React = require('react');
+var ButtonTemplate = require('./buttonTemplate');
 
 // The banner for the application that shows the user name, settings button
 //    and the link to the Mea-Ola site
 var AccountBanner = React.createClass({
   render: function() {
     return (
-      <g>
-        <MeaOlaLink position='0'/>
-        <AccountLink position='1' />
-        <ExtSettingsDropdown position='2' />
+      <g id="AccountBanner">
+        <rect className="banner" width="100%" height="22"></rect>
+        <MeaOlaLink size="26" position='0'/>
+        <AccountLink size="26" position='1' />
+        <ExtSettingsDropdown size="26" position='2' />
       </g>
     );
   }
 });
 
-var ButtonTemplate = React.createClass({
-  render: function() {
-    var xPos = this.props.position*20;
-    return (
-      <g>
-        <rect className="mea-ola-button" x={xPos}></rect>
-      </g>
-    );
-  }
-});
 // Button that redirects the user to the mea-ola homepage
 var MeaOlaLink = React.createClass({
   render: function() {

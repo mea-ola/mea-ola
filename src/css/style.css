@@ -1,25 +1,85 @@
-svg {
-  padding: 10px;
+
+/*
+http://paletton.com/#uid=7451J0kllllaFw0g0qFqFg0w0aF
+*/
+
+{
+  colors:
+  #837EB1
+  #5A5494
+  #393276
+  #1F1959
+  #0D083B
+
+  #78B494
+  #4B966E
+  #28784D
+  #0F5A32
+  #003C1C
+
+  #FFECAA
+  #D4BD6A
+  #AA9139
+  #806815
+  #554200
+
+  #FFBDAA
+  #D4826A
+  #AA5239
+  #802D15
+  #551300
 }
+
+body {
+  background-color: #0D083B;
+}
+
+svg {
+  background-color: #0D083B;
+}
+
+#ActionsBanner {
+  transform: translate(0px,400px); /*change to lower ActionsBanner */
+}
+#ActionsBanner > .banner {
+  fill: #393276;
+}
+#ActionsBanner > * .mea-ola-button {
+  fill: #837EB1;
+  stroke: #393276;
+}
+
+#AccountBanner {
+  transform: translate(0px,0px); /*change to lower AccountBanner */
+}
+#AccountBanner > .banner {
+  fill: #393276;
+}
+#AccountBanner > * .mea-ola-button {
+  fill: #837EB1;
+  stroke: #393276;
+}
+
+#GardenBox {
+  transform: translate(0px,26px); /*change to lower AccountBanner */
+}
+#GardenBox > .garden {
+  fill: #5A5494;
+}
+
 .mea-ola-button {
   -webkit-transition: .2s;
-  transform-origin:center;
-  transform: translate(2px,2px);
-  width:14px;
-  height:14px;
-  rx:3px;
-  ry:3px;
-  fill: white;
-  cursor:pointer;
+  transform-origin: center;
+  transform: scale(0.75, 0.75);
+  rx: 3px;
+  ry: 3px;
+  stroke-width: 4px;
+  cursor: pointer;
 }
 .mea-ola-button:hover {
-  transform: translate(0px,0px) rotate(90deg);
-  width:18px;
-  height:18px;
+  transform: scale(0.9,0.9) rotate(90deg);
 }
 .mea-ola-button:active {
   -webkit-transition: .1s;
-  transform: translate(4px,4px) rotate(90deg);
-  width:10px;
-  height:10px;
+  transform: scale(0.65,0.65) rotate(90deg);
 }

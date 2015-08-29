@@ -8,8 +8,8 @@ var React = require('react');
 var GardenBox = React.createClass({
   render: function() {
     return (
-      <g>
-        {/* main view here, with objects and pets */}
+      <g id="GardenBox">
+        <rect className="garden" width="100%" height="370"></rect>
       </g>
     );
   }
