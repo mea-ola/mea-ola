@@ -8,8 +8,9 @@ var React = require('react');
 var ActivePetBanner = React.createClass({
   render: function() {
     return (
-      <g>
-        {/* Pet Name: Some Basic Stats View? */}
+      <g id="ActivePetBanner">
+        <rect className="banner" width="100%" height="22"></rect>
+        <text y="20" x="5"> active pet </text>
       </g>
     );
   }

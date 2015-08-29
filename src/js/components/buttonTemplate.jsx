@@ -6,12 +6,13 @@ var React = require('react');
 
 var ButtonTemplate = React.createClass({
   render: function() {
-    this.props.size = this.props.size || 22
+    this.props.size = this.props.size || "22"
+    this.props.string = this.props.string || " ";
     var buttonSize = (this.props.size) + "px";
-    var xPos = this.props.position*(this.props.size*1.2);
+    var xPos = this.props.position*(this.props.size);
     return (
-      <g>
-        <rect className="mea-ola-button" height={buttonSize} width={buttonSize} x={xPos}></rect>
+      <g className="mea-ola-button">
+        <rect height={buttonSize} width={buttonSize} x={xPos}></rect>
       </g>
     );
   }

@@ -9,7 +9,7 @@ var GardenBox = React.createClass({
   render: function() {
     return (
       <g id="GardenBox">
-        <rect className="garden" width="100%" height="370"></rect>
+        <rect className="garden" width="100%" height="344"></rect>
       </g>
     );
   }

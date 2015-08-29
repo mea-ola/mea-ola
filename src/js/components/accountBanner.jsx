@@ -12,9 +12,10 @@ var AccountBanner = React.createClass({
     return (
       <g id="AccountBanner">
         <rect className="banner" width="100%" height="22"></rect>
-        <MeaOlaLink size="26" position='0'/>
-        <AccountLink size="26" position='1' />
-        <ExtSettingsDropdown size="26" position='2' />
+        <MeaOlaLink size="22" position='0' />
+        <AccountLink size="22" position='1' />
+        <ExtSettingsDropdown size="22" position='2' />
+        <text y="20" x="100"> MEA-OLA </text>
       </g>
     );
   }
@@ -24,7 +25,7 @@ var AccountBanner = React.createClass({
 var MeaOlaLink = React.createClass({
   render: function() {
     return (
-      <ButtonTemplate position={this.props.position}/>
+      <ButtonTemplate position={this.props.position} size={this.props.size}/>
     );
   }
 });
@@ -33,7 +34,7 @@ var MeaOlaLink = React.createClass({
 var AccountLink = React.createClass({
   render: function() {
     return (
-      <ButtonTemplate position={this.props.position}/>
+      <ButtonTemplate position={this.props.position} size={this.props.size}/>
     );
   }
 });
@@ -42,7 +43,7 @@ var AccountLink = React.createClass({
 var ExtSettingsDropdown = React.createClass({
   render: function() {
     return (
-      <ButtonTemplate position={this.props.position}/>
+      <ButtonTemplate position={this.props.position} size={this.props.size}/>
     );
   }
 });
