@@ -1,0 +1,101 @@
+/*
+http://paletton.com/#uid=7451J0kllllaFw0g0qFqFg0w0aF
+*/
+
+colors = {
+  '.purple': {
+    '0': #837EB1,
+    '1': #5A5494,
+    '2': #393276,
+    '3': #1F1959,
+    '4': #0D083B
+  }
+  '.green': {
+    '0': #78B494,
+    '1': #4B966E,
+    '2': #28784D,
+    '3': #0F5A32,
+    '4': #003C1C
+  }
+  '.yellow': {
+    '0': #FFECAA,
+    '1': #D4BD6A,
+    '2': #AA9139,
+    '3': #806815,
+    '4': #554200
+  }
+  '.orange': {
+    '0': #FFBDAA,
+    '1': #D4826A,
+    '2': #AA5239,
+    '3': #802D15,
+    '4': #551300
+  }
+}
+
+for key, value in colors
+  {key}
+    text
+      fill: value["4"]
+
+
+    html *
+      font-family: 'Press Start 2P';
+      text-transform: uppercase;
+      background-color: value["4"]
+
+    body
+      background-color: value["4"]
+
+    svg
+      background-color: value["4"]
+
+    #AccountBanner
+      transform: translate(0px,0px) /*change to lower AccountBanner */
+
+    #AccountBanner > .banner
+      fill: value["2"]
+
+    #ActivePetBanner
+      transform: translate(0px,26px) /*change to lower ActivePetBanner */
+
+    #ActivePetBanner > .banner
+      fill: value["2"]
+
+    #GardenBox
+      transform: translate(0px,52px) /*change to lower GardenBox */
+
+    #GardenBox > .garden
+      fill: value["1"]
+
+    #ActionsBanner
+      transform: translate(0px,400px) /*change to lower ActionsBanner */
+
+    #ActionsBanner > .banner
+      fill: value["2"]
+
+    #theme-select
+      transform: translate(400px,0px)
+
+    .mea-ola-button *
+      -webkit-transition: .2s
+      transform-origin: center
+      transform: scale(0.75, 0.75)
+      rx: 3px
+      ry: 3px
+      stroke-width: 4px
+      cursor: pointer
+
+    .mea-ola-button > rect
+      fill: value["1"]
+      stroke: value["2"]
+
+    .mea-ola-button:hover *
+      transform: scale(0.9,0.9)
+
+    .mea-ola-button:hover > rect
+      fill: value["0"]
+
+    .mea-ola-button:active *
+      -webkit-transition: .1s
+      transform: scale(0.65,0.65)

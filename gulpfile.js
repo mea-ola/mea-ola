@@ -6,6 +6,7 @@ var browserify = require('browserify');
 var reactify = require('reactify');
 var webserver = require('gulp-webserver');
 var deploy = require('gulp-gh-pages');
+var stylus = require('gulp-stylus');
 
 var paths = {
   scripts: './src/js/**/*.@(js|jsx)',
@@ -13,6 +14,7 @@ var paths = {
   html: './src/**/*.html',
   images: './src/**/*.png',
   css: './src/css/*.css',
+  stylus: './src/css/*.styl',
   build_css: './build/css',
   build_files: './build/**/*',
   build_dir: './build'
@@ -44,6 +46,13 @@ gulp.task('build:css', function(){
     .pipe(gulp.dest(paths.build_css));
 });
 
+// Get one .styl file and render
+gulp.task('build:stylus', function () {
+  gulp.src(paths.stylus)
+    .pipe(stylus())
+    .pipe(gulp.dest('./build/css'));
+});
+
 gulp.task('build:images', function(){
   gulp.src(paths.images)
     .pipe(gulp.dest(paths.build_dir));
@@ -68,6 +77,6 @@ gulp.task('ghPages', ['build'], function () {
     .pipe(deploy());
 });
 
-gulp.task('build', ['build:scripts', 'build:html', 'build:images', 'build:css']);
+gulp.task('build', ['build:scripts', 'build:html', 'build:images', 'build:css', 'build:stylus']);
 gulp.task('default', ['build', 'webserver', 'watch']);
 gulp.task('deploy', ['build', 'ghPages']);

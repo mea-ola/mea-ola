@@ -6,6 +6,9 @@
 var MockCreatures = {
   'c1': {
     'name':"Pila",
+    'garden':'http://i.imgur.com/1vAkppw.png',
+    'app':'http://i.imgur.com/KDoGDQe.png',
+    'box':'http://i.imgur.com/TbXy3YA.png'
   },
   'c2': {
     'name':"Keka",

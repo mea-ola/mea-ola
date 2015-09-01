@@ -12,7 +12,7 @@ var ButtonTemplate = React.createClass({
     var xPos = this.props.position*(this.props.size);
     return (
       <g className="mea-ola-button">
-        <rect height={buttonSize} width={buttonSize} x={xPos}></rect>
+        <rect onClick={this.props.clickAction} height={buttonSize} width={buttonSize} x={xPos}></rect>
       </g>
     );
   }

@@ -9,7 +9,7 @@ var ActivePetBanner = React.createClass({
   render: function() {
     return (
       <g id="ActivePetBanner">
-        <rect className="banner" width="100%" height="22"></rect>
+        <rect className="banner purple_set" width="100%" height="23"></rect>
         <text y="20" x="5"> active pet </text>
       </g>
     );

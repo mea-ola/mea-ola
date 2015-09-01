@@ -11,11 +11,11 @@ var AccountBanner = React.createClass({
   render: function() {
     return (
       <g id="AccountBanner">
-        <rect className="banner" width="100%" height="22"></rect>
+        <rect className="banner purple_set" width="100%" height="23"></rect>
         <MeaOlaLink size="22" position='0' />
         <AccountLink size="22" position='1' />
         <ExtSettingsDropdown size="22" position='2' />
-        <text y="20" x="100"> MEA-OLA </text>
+        <text id="AccountBanner-text" y="20" x="100"> MEA-OLA </text>
       </g>
     );
   }
