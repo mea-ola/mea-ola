@@ -33,16 +33,19 @@ colors = {
   }
 }
 
+
+html *
+  font-family: 'Press Start 2P'
+  text-transform: uppercase
+
+html
+  background-color: black
+
 for key, value in colors
   {key}
+
     text
       fill: value["4"]
-
-
-    html *
-      font-family: 'Press Start 2P';
-      text-transform: uppercase;
-      background-color: value["4"]
 
     body
       background-color: value["4"]
@@ -75,7 +78,7 @@ for key, value in colors
       fill: value["2"]
 
     #theme-select
-      transform: translate(400px,0px)
+      transform: translate(0px,0px)
 
     .mea-ola-button *
       -webkit-transition: .2s
@@ -99,3 +102,5 @@ for key, value in colors
     .mea-ola-button:active *
       -webkit-transition: .1s
       transform: scale(0.65,0.65)
+      rx: 23px
+      ry: 23px

@@ -14,8 +14,9 @@ var GardenWindow = React.createClass({
   render: function() {
     // the viewBox defines are min-width, min-height, width, and height
     var viewBox_value = "0 0 640 800";
+    console.log(this.props.ThemeStore);
     return (
-      <svg viewBox={viewBox_value}>
+      <svg className={this.props.ThemeStore.colors[this.props.ThemeStore.theme % 4]} viewBox={viewBox_value}>
         <AccountBanner />
         <ActivePetBanner />
         <GardenBox />

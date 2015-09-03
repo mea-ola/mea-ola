@@ -3,7 +3,8 @@ var ThemeActions = require('../actions/ThemeActions');
 
 class ThemeStore {
   constructor() {
-    this.theme = "blueStyle";
+    this.theme = 0;
+    this.colors = ["green", "orange", "purple", "yellow"];
 
     this.bindActions(ThemeActions);
   }
